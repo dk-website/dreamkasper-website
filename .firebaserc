@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "dreamkasper-website",
+    "production": "dreamkasper-website"
+  },
+  "targets": {
+    "dreamkasper-website": {
+      "hosting": {
+        "production": [
+          "dreamkasper-website"
+        ]
+      }
+    }
+  }
+}
