@@ -1,0 +1,16 @@
+name: PRODUCTION Workflow
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build-deploy-webapp:
+    name: Build & Deploy webapp to Firebase
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to Firebase
+        uses: w9jds/firebase-action@v2.0.0
+        with:
+          args: deploy -P dreamkasper-website --only hosting:production
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
