@@ -8,6 +8,7 @@ jobs:
     name: Build & Deploy webapp to Firebase
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@v2.0.0
         with:
