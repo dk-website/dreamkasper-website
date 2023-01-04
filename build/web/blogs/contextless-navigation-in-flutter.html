@@ -1,0 +1,387 @@
+<!DOCTYPE html><!--  This site was created in Webflow. https://www.webflow.com  -->
+<!--  Last Published: Mon Jan 02 2023 14:59:37 GMT+0000 (Coordinated Universal Time)  -->
+<html data-wf-page="634d7e65980a611e64b8e8d8" data-wf-site="633fa9ac28f7af5687542163">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Contextless navigation in flutter | Blog | Dream Kasper LLP</title>
+    <meta content="Learn how to do navigation without Context." name="description" />
+    <meta content="Contextless navigation in flutter | Blog | Dream Kasper LLP" property="og:title" />
+    <meta content="Learn how to do navigation without Context." property="og:description" />
+    <meta
+        content="https://dreamkasper.com/images/blogs/contextless-navigation-in-flutter/contextless-navigation-in-flutter-cover.png"
+        property="og:image" />
+    <meta content="Contextless navigation in flutter | Blog | Dream Kasper LLP" property="twitter:title" />
+    <meta content="Learn how to do navigation without Context." property="twitter:description" />
+    <meta
+        content="https://dreamkasper.com/images/blogs/contextless-navigation-in-flutter/contextless-navigation-in-flutter-cover.png"
+        property="twitter:image" />
+    <meta property="og:type" content="website" />
+    <meta content="summary_large_image" name="twitter:card" />
+
+
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="Webflow" name="generator">
+    <link href="../css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="../css/webflow.css" rel="stylesheet" type="text/css">
+    <link href="../css/dream-kasper.webflow.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+    <script
+        type="text/javascript">WebFont.load({ google: { families: ["Poppins:300,regular,500,600", "Noto Sans:regular,600"] } });</script>
+    <!-- [if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif] -->
+    <script
+        type="text/javascript">!function (o, c) { var n = c.documentElement, t = " w-mod-"; n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch") }(window, document);</script>
+    <link href="../images/favicon.png" rel="shortcut icon" type="image/x-icon">
+    <link href="../images/webclip.png" rel="apple-touch-icon">
+</head>
+
+<body>
+    <div class="navbar-logo-left white wf-section">
+        <div data-w-id="34a59ac5-1f16-111a-8f49-e6af62d9342d" data-animation="default" data-collapse="medium"
+            data-duration="400" data-easing="ease" data-easing2="ease" role="banner"
+            class="navbar-logo-left-container shadow-three w-nav">
+            <div class="container">
+                <div class="navbar-wrapper">
+                    <a href="../index.html" class="navbar-brand w-nav-brand"><img src="../images/dk-color.svg"
+                            loading="lazy" alt="" class="brand-logo inner"><img src="../images/dk-white.svg"
+                            loading="lazy" alt="" class="brand-logo desktop inner-whiite"></a>
+                    <nav role="navigation" class="nav-menu-wrapper w-nav-menu">
+                        <ul role="list" class="nav-menu-two w-list-unstyled">
+                            <li class="nav-menu-two-item">
+                                <a href="../services.html" class="nav-link dark">Services</a>
+                            </li>
+                            <li class="nav-menu-two-item">
+                                <a href="../about.html" class="nav-link dark">About us</a>
+                            </li>
+                            <li class="nav-menu-two-item">
+                                <a href="../blogs.html" class="nav-link dark">Blogs</a>
+                            </li>
+                            <li class="mobile-margin-top-10">
+                                <a href="../contact.html" class="button-primary w-button">Contact Us</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="menu-button w-nav-button">
+                        <div class="w-icon-nav-menu"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section services blog wf-section">
+        <div class="container w-container">
+            <div class="blog-inner-banner"><img
+                    src="../images/blogs/contextless-navigation-in-flutter/contextless-navigation-in-flutter-cover.png"
+                    loading="lazy" id="w-node-_973a5ec0-f6d2-ac32-beb2-e44c8f81328e-64b8e8d8"
+                    sizes="(max-width: 479px) 93vw, (max-width: 767px) 96vw, (max-width: 991px) 97vw, (max-width: 1439px) 46vw, 554px"
+                    srcset="../images/blogs/contextless-navigation-in-flutter/contextless-navigation-in-flutter-cover.png 500w,../images/blogs/contextless-navigation-in-flutter/contextless-navigation-in-flutter-cover.png 800w,../images/blogs/contextless-navigation-in-flutter/contextless-navigation-in-flutter-cover.png 1080w,../images/blogs/contextless-navigation-in-flutter/contextless-navigation-in-flutter-cover.png 1176w"
+                    alt="" class="blog-main-image">
+                <div id="w-node-_9c02dcee-cf2c-64f5-2475-e5734cd36ca5-64b8e8d8" class="blog-inner-detail">
+                    <h1 class="titles h1">Contextless navigation in flutter
+                    </h1>
+                    <ul role="list" class="blog-detail-list banner w-list-unstyled">
+                        <li class="blog-detail-item"><img src="../images/akar-icons_clock.svg" loading="lazy" alt=""
+                                class="blog-detail-icon">
+                            <div class="blog-detail-text">15 mins</div>
+                        </li>
+                        <li class="blog-detail-item"><img src="../images/akar-icons_calendar.svg" loading="lazy" alt=""
+                                class="blog-detail-icon">
+                            <div class="blog-detail-text">10th Dec, 22</div>
+                        </li>
+
+                    </ul>
+                    <div class="footer-social-block">
+                        <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://dreamkasper.com/blogs/contextless-navigation-in-flutter.html&source=DreamKasper"
+                            class="footer-social-link w-inline-block"><img src="../images/akar-icons_linkedin-fill.svg"
+                                loading="lazy" alt="" class="social-icons"></a>
+                        <a href="http://www.facebook.com/sharer.php?u=https://dreamkasper.com/blogs/contextless-navigation-in-flutter.html&source=DreamKasper"
+                            class="footer-social-link w-inline-block"><img
+                                src="../images/akar-icons_linkedin-fill-1.svg" loading="lazy" alt=""
+                                class="social-icons"></a>
+                        <a href="http://twitter.com/intent/tweet/?url=https://dreamkasper.com/blogs/contextless-navigation-in-flutter.html&source=DreamKasper"
+                            class="footer-social-link w-inline-block"><img
+                                src="../images/akar-icons_linkedin-fill-2.svg" loading="lazy" alt=""
+                                class="social-icons"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wf-section">
+        <div class="container-small w-container">
+            <div class="blog-outer-wrapper">
+                <div class="blog-content">
+                    <p class="body-text blog-content">
+                        <b>What is are Routes?
+                        </b><br>
+                        The apps display their content in a full-screen container called pages or screens. In flutter,
+                        the pages or screens are called Routes.
+                        <br>Flutter provides a system for navigating from one screen to another. Small applications
+                        without complex deep linking can use Navigator. The Navigator widget displays screen as a stack
+                        using correct transition animations. To navigate to a new screen one has to access the Navigator
+                        through the route’s BuildContext and call methods such as <b>push()</b> or <b>pop()</b>.
+                        <br>
+                        Because Navigator keeps a stack of Route objects that means it represents the history of stack.
+                        The push() method also takes a route object.
+                        The MaterialPageRoute object is a subclass of route that specifies the transition animations for
+                        material design.
+                        <br>
+                        <br>
+                        <img src="../images/blogs/contextless-navigation-in-flutter/code-001.png">
+                        <br> <br>
+                        Applications with simple navigation and simple deep linking requirements can use the Navigator
+                        for navigation and the <b>MaterialApp.routes</b> parameter for deep links:
+                        <br>
+                        <br>
+                        <img src="../images/blogs/contextless-navigation-in-flutter/code-002.png">
+                        <br> <br>
+                        With the widgets and routes in place, trigger navigation by using the
+                        <b>Navigator.pushNamed()</b> method. This tells Flutter to build the widget defined in the route
+                        and launch the screen.
+                        <br>
+                        <br>
+                        <img src="../images/blogs/contextless-navigation-in-flutter/code-003.png">
+                        <br> <br>
+                        By using <b>pop()</b> method the top most route that is the current route is popped off the
+                        navigator stack.
+                        <br>
+                        <br>
+                        <img src="../images/blogs/contextless-navigation-in-flutter/code-004.png">
+                        <br> <br>
+
+                        <b>Limitations of using NamedRoute:</b>
+                        <br>
+                        Although named routes can handle deep links, the behavior is always the same and can’t be
+                        customized. When a new deep link is received by the platform, Flutter pushes a new route onto
+                        the Navigator regardless where the user currently is.
+                        And hence using named routes is not recommended in many applications although this method is
+                        sufficient for your small applications having two or three screens.
+                        <br>
+                        For customizing navigation in your flutter app to achieve the most convenient navigation
+                        throughout your app follow the steps given below:
+
+                    </p>
+                </div>
+                <div class="blog-content">
+                    <p class="body-text blog-content">
+                        <b>Step 1: Install get_it and in your pubspec.yaml file:
+                        </b>
+                        <br>
+                        <script src="https://gist.github.com/sachin-darde/3eac9274b2e76b80e218b23574b2d811.js"></script>
+                        Why get_it ?<br>
+                        As your App grows, at some point you will need to put your app's logic in classes that are
+                        separated from your Widgets. Keeping your widgets from having direct dependencies makes your
+                        code better organized and easier to test and maintain. But now you need a way to access these
+                        objects from your UI code.
+                        Further we will be using an object from getIt called navigator.
+                        <br>
+                        The navigation is based on three important files, which are:
+                    <ol>
+                        <li>
+                            navigation_service.dart
+                        </li>
+                        <li>
+                            routing_names.dart
+                        </li>
+                        <li>
+                            routing_config.dart
+                        </li>
+                    </ol>
+
+                    <br>
+                    <b>Step 2: Creating navigation services
+                    </b>
+                    <br>
+                    Now create a folder named services where you can place all your services like graphQL service,
+                    navigation services and such. Now under services create a folder named navigation_services and under
+                    that create a new file named navigation_service.dart.
+                    In here we will write our navigation functionalities,
+                    <br>
+                    <script src="https://gist.github.com/sachin-darde/6ba6c1ed8cb52967591edcf4e2995062.js"></script>
+                    This allows you to navigate anywhere from any point throughout the app without build context.
+                    <br><br>
+                    <b>Step 3: Register the navigation service
+                    </b>
+                    <br>
+                    <script src="https://gist.github.com/sachin-darde/9547c5478fb9c389cd6990076891e64a.js"></script>
+                    <br>
+                    <b
+                    >Step 4:
+                        Now, to connect the NavigationService with the app we need to assign the navigator key in
+                        MaterialApp.
+                    </b>
+                    <br>
+                    <script src="https://gist.github.com/sachin-darde/65e241a6d22858427c4d20cf35d4937f.js"></script>
+                    <br><br>
+                    <b>Step 5: Name your routes
+                    </b>
+                    Create a file named route_name.dart under the navigation_services folder. And in here we will create
+                    classes according to our routes.
+                    <br>
+                    <script src="https://gist.github.com/sachin-darde/473849e9b21408c29de672f122496b0f.js"></script>
+                    <br>
+                    For example, if you have to initialize your login page route this is how you can go about it:
+                    <script src="https://gist.github.com/sachin-darde/d69b735375feae78715b3dc4bdfba64b.js"></script>
+                    <br>
+                    <b>Step 6: Creating routing_config.dart
+                    </b>
+                    Create routing_config.dart under navigation_services folder.
+                    Finally assign the screen file to the routes you initialized in route_name.dart in here.
+                    <br>
+                    <script src="https://gist.github.com/sachin-darde/2365ef73ea7f4ba9215c31bdbd91755a.js"></script>
+                    <br>
+                    <b>Step 7: Actual Use Case
+                    </b>
+                    <script src="https://gist.github.com/sachin-darde/e92e6df7f5496862a31e00c9b46b6292.js"></script>
+                    <br><br>
+                </div>
+            </div>
+        </div>
+        <div class="section wf-section">
+            <div class="container w-container">
+                <div class="section-header center">
+                    <h1 class="titles h2 text-center">Recent stories</h1>
+                </div>
+                <div class="blog-card-wrapper margin-top-large">
+                    <a href="ar-in-flutter.html" class="blog-card w-inline-block"><img
+                            src="../images/blogs/ar-in-flutter/ar-in-flutter.png" loading="lazy"
+                            sizes="(max-width: 479px) 93vw, (max-width: 767px) 96vw, (max-width: 991px) 46vw, (max-width: 1439px) 28vw, 349.328125px"
+                            srcset="../images/blogs/ar-in-flutter/ar-in-flutter.png 500w, ../images/blogs/ar-in-flutter/ar-in-flutter.png 738w"
+                            alt="AR in flutter" class="blog-thumbnail">
+                        <div class="blog-detail">
+                            <ul role="list" class="blog-detail-list w-list-unstyled">
+                                <li class="blog-detail-item"><img src="../images/akar-icons_clock.svg" loading="lazy"
+                                        alt="" class="blog-detail-icon">
+                                    <div class="blog-detail-text">20 mins</div>
+                                </li>
+                                <li class="blog-detail-item"><img src="../images/akar-icons_calendar.svg" loading="lazy"
+                                        alt="" class="blog-detail-icon">
+                                    <div class="blog-detail-text">25th Dec, 22</div>
+                                </li>
+                            </ul>
+                        </div>
+                        <h2 class="titles blog-title">AR in Flutter</h2>
+                        <p class="body-text blog-text">you'll learn about how to build an augmented reality app in
+                            Flutter
+                            with a plugin that supports both Android and iOS devices.</p>
+                    </a>
+
+                    <a href="beacon-scanning.html" class="blog-card w-inline-block"><img
+                            src="../images/blogs/beacon-scanning/beacon-scanning-cover.png" loading="lazy"
+                            sizes="(max-width: 479px) 93vw, (max-width: 767px) 96vw, (max-width: 991px) 46vw, (max-width: 1439px) 28vw, 349.328125px"
+                            srcset="../images/blogs/beacon-scanning/beacon-scanning-cover.png 500w, ../images/blogs/beacon-scanning/beacon-scanning-cover.png 738w"
+                            alt="AR in flutter" class="blog-thumbnail">
+                        <div class="blog-detail">
+                            <ul role="list" class="blog-detail-list w-list-unstyled">
+                                <li class="blog-detail-item"><img src="../images/akar-icons_clock.svg" loading="lazy"
+                                        alt="" class="blog-detail-icon">
+                                    <div class="blog-detail-text">25 mins</div>
+                                </li>
+                                <li class="blog-detail-item"><img src="../images/akar-icons_calendar.svg" loading="lazy"
+                                        alt="" class="blog-detail-icon">
+                                    <div class="blog-detail-text">23rd Dec, 22</div>
+                                </li>
+                            </ul>
+                        </div>
+                        <h2 class="titles blog-title">Beacons scanning app with Flutter</h2>
+                        <p class="body-text blog-text">In this article, we will check out how to implement Beacons
+                            scanning
+                            app in flutter using the beacons_plugin package.</p>
+                    </a>
+
+                    <a href="deep-ar-part-1.html" class="blog-card w-inline-block"><img
+                            src="../images/blogs/deep-ar-part-2/deepar-1-cover.png" loading="lazy"
+                            sizes="(max-width: 479px) 93vw, (max-width: 767px) 96vw, (max-width: 991px) 46vw, (max-width: 1439px) 28vw, 349.328125px"
+                            srcset="../images/blogs/deep-ar-part-1/deepar-1-cover.png 500w, ../images/blogs/deep-ar-part-1/deepar-1-cover.png 738w"
+                            alt="AR in flutter" class="blog-thumbnail">
+                        <div class="blog-detail">
+                            <ul role="list" class="blog-detail-list w-list-unstyled">
+                                <li class="blog-detail-item"><img src="../images/akar-icons_clock.svg" loading="lazy"
+                                        alt="" class="blog-detail-icon">
+                                    <div class="blog-detail-text">30 mins</div>
+                                </li>
+                                <li class="blog-detail-item"><img src="../images/akar-icons_calendar.svg" loading="lazy"
+                                        alt="" class="blog-detail-icon">
+                                    <div class="blog-detail-text">15th Dec, 22</div>
+                                </li>
+                            </ul>
+                        </div>
+                        <h2 class="titles blog-title">Build Face filter app with Flutter and Deep AR (Part 1)
+                        </h2>
+                        <p class="body-text blog-text">The Installation of DeepAR for Android applications in a
+                            flutter.</p>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+        <div class="section wf-section">
+            <div class="container w-container">
+                <div class="cta-block">
+                    <h1 class="titles h2 text-center color-white">Have a product idea? Let’s build together!</h1>
+                    <a href="../contact.html" class="button-primary white w-button">Get in touch</a>
+                </div>
+            </div>
+        </div>
+        <section class="footer-dark wf-section">
+            <div class="container w-container">
+                <div class="footer-wrapper">
+                    <div id="w-node-fd5c23db-46ce-172c-2c15-f2330a1e0a5b-0a1e0a58" class="logo-social-block">
+                        <a href="../index.html" class="footer-brand w-inline-block"><img src="../images/dk-color.svg"
+                                loading="lazy" alt="" class="fotter-logo"></a>
+                        <div class="footer-social-block">
+                            <a href="https://www.instagram.com/dreamkasper/" target="_blank"
+                                class="footer-social-link w-inline-block"><img
+                                    src="../images/ant-design_instagram-filled.svg" loading="lazy" alt=""
+                                    class="social-icons"></a>
+                            <a href="https://www.linkedin.com/company/dream-kasper/" target="_blank"
+                                class="footer-social-link w-inline-block"><img
+                                    src="../images/akar-icons_twitter-fill.svg" loading="lazy" alt=""
+                                    class="social-icons"></a>
+                        </div>
+                    </div>
+                    <div class="footer-content">
+                        <div id="w-node-fd5c23db-46ce-172c-2c15-f2330a1e0a66-0a1e0a58" class="footer-block">
+                            <a href="../services.html" class="footer-link">Services</a>
+                            <a href="../about.html" class="footer-link">About us</a>
+                            <a href="../blogs.html" class="footer-link">Blogs</a>
+                            <a href="../contact.html" class="footer-link">Contact Us</a>
+                        </div>
+                    </div>
+                    <div id="w-node-fd5c23db-46ce-172c-2c15-f2330a1e0a6f-0a1e0a58" class="footer-block">
+                        <ul role="list" class="footer-list w-list-unstyled">
+                            <li class="footer-list-item"><img src="../images/call.svg" loading="lazy" alt=""
+                                    class="footer-icons">
+                                <a href="tel:+919409349274" class="footer-link-text">+91 94093 49274</a>
+                            </li>
+                            <li class="footer-list-item"><img src="../images/mail.svg" loading="lazy" alt=""
+                                    class="footer-icons">
+                                <a href="mailto:contact@dreamkasper.com"
+                                    class="footer-link-text">contact@dreamkasper.com</a>
+                            </li>
+                            <li class="footer-list-item"><img src="../images/location.svg" loading="lazy" alt=""
+                                    class="footer-icons">
+                                <a href="https://goo.gl/maps/DshHkJeRv5idJxv99" target="_blank"
+                                    class="footer-link-text">C-7,401 Morya building,<br>Gauri estate Badlapur
+                                    Thane,<br>Maharashtra 421503</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="container w-container">
+                    <div class="footer-copyright-center">© Dream Kasper LLP 2017 All Rights Reserved</div>
+                </div>
+            </div>
+        </section>
+        <script
+            src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=633fa9ac28f7af5687542163"
+            type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+            crossorigin="anonymous"></script>
+        <script src="js/webflow.js" type="text/javascript"></script>
+        <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
+</body>
+
+</html>
