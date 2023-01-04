@@ -2003,6 +2003,7 @@ p {
   height: 290px;
   border-radius: 12px;
   -o-object-fit: cover;
+  box-shadow: 0 0 5px 0px #e3e3e3;
   object-fit: cover;
 }
 
