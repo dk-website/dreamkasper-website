@@ -10,6 +10,42 @@
       ],
       "rewrites": [
         {
+          "source": "/about{,/**}",
+          "destination": "/about.html"
+        },
+        {
+          "source": "/services{,/**}",
+          "destination": "/services.html"
+        },
+        {
+          "source": "/contact{,/**}",
+          "destination": "/contact.html"
+        },
+        {
+          "source": "/blogs/ar-in-flutter{,/**}",
+          "destination": "/blogs/ar-in-flutter.html"
+        },
+        {
+          "source": "/blogs/beacon-scanning{,/**}",
+          "destination": "/blogs/beacon-scanning.html"
+        },
+        {
+          "source": "/blogs/contextless-navigation-in-flutter{,/**}",
+          "destination": "/blogs/contextless-navigation-in-flutter.html"
+        },
+        {
+          "source": "/blogs/deep-ar-part-1{,/**}",
+          "destination": "/blogs/deep-ar-part-1.html"
+        },
+        {
+          "source": "/blogs/deep-ar-part-2{,/**}",
+          "destination": "/blogs/deep-ar-part-2.html"
+        },
+        {
+          "source": "/blogs{,/**}",
+          "destination": "/blogs.html"
+        },
+        {
           "source": "**",
           "destination": "/index.html"
         }
