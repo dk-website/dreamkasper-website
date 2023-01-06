@@ -10,16 +10,16 @@
       ],
       "rewrites": [
         {
-          "source": "/about{,/**}",
-          "destination": "/about.html"
+          "source": "/about-us{,/**}",
+          "destination": "/about-us.html"
         },
         {
           "source": "/services{,/**}",
           "destination": "/services.html"
         },
         {
-          "source": "/contact{,/**}",
-          "destination": "/contact.html"
+          "source": "/contact-us{,/**}",
+          "destination": "/contact-us.html"
         },
         {
           "source": "/blogs/ar-in-flutter{,/**}",
