@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.spire.ai.search_app",
+      "sha256_cert_fingerprints": [
+        "AC:D6:E5:2A:4F:1E:A0:4D:9F:A4:F4:F3:EA:6E:95:52:64:87:CB:93:10:08:31:2A:DF:3C:F1:5D:B7:76:56:39"
+      ]
+    }
+  }
+]
