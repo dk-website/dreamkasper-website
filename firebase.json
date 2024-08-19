@@ -22,6 +22,10 @@
           "destination": "/contact-us.html"
         },
         {
+          "source": "/test{,/**}",
+          "destination": "/test.html"
+        },
+        {
           "source": "/blogs/ar-in-flutter{,/**}",
           "destination": "/blogs/ar-in-flutter.html"
         },
