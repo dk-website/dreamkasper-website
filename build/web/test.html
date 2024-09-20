@@ -1,30 +1,23 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Cloudflare Turnstile Test</title>
-    
-    <!-- Cloudflare Turnstile -->
-    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open in Safari</title>
 </head>
-
 <body>
+    <script>
+        // Detect if the user is using Instagram's in-app browser
+        var ua = navigator.userAgent || navigator.vendor || window.opera;
 
-    <h1>Cloudflare Turnstile CAPTCHA Test</h1>
-    <form id="test-form" action="?" method="POST">
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        
-        <!-- Cloudflare Turnstile widget -->
-        <div class="cf-turnstile" data-sitekey="0x4AAAAAAAhkE807bMNptmlH"></div>
-        
-        <button type="submit">Submit</button>
-        <a href="https://google.com" download>Open in Safari</a>
-    </form>
-
+        if (ua.indexOf('Instagram') > -1 || ua.indexOf('FBAN') > -1 || ua.indexOf('FBAV') > -1) {
+            // Show a message prompting the user to open in Safari
+            document.body.innerHTML = '<h1>Please open this link in Safari for the best experience</h1>';
+            document.body.innerHTML += '<a href="mailto://sachin@gmail.com" target="_blank" download><button>Open in Safari</button></a>';
+        } else {
+            // Normal behavior if not using Instagram
+            window.location.href = "https://google.com/";
+        }
+    </script>
 </body>
-
 </html>
