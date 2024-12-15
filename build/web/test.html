@@ -1,23 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Open in Safari</title>
+  <title>Core Redirection Logic</title>
+  <script>
+    // Detect the browser and operating system
+    var redirect_url = 'https://app.dadlabs.in/';
+    var browser = navigator.userAgent.toLowerCase().includes('instagram') ? 'instagram' : 
+                  (navigator.userAgent.toLowerCase().includes('facebook') ? 'facebook' : 'other');
+    var os = /android/i.test(navigator.userAgent) ? 'android' : (/iPhone|iPad|iPod/i.test(navigator.userAgent) ? 'ios' : 'other');
+
+    // Redirection function
+    function redirectToApp() {
+      if (os === 'android') {
+        if (browser === 'instagram' || browser === 'facebook') {
+          // Special handling for Android + Instagram/Facebook in-app browsers
+          window.location.replace(
+            `intent://${redirect_url}?utm_source=app&utm_medium=android&utm_campaign=redirect#Intent;scheme=https;S.browser_fallback_url=${redirect_url};end;`
+          );
+        } else {
+          // Default Android redirection
+          window.location.replace(redirect_url);
+        }
+      } else if (os === 'ios') {
+        // iOS redirection
+        window.location.replace(redirect_url);
+      } else {
+        // Default fallback for other platforms
+        window.location.replace(redirect_url);
+      }
+    }
+
+    // Trigger redirection after a short delay
+    setTimeout(redirectToApp, 1000);
+  </script>
 </head>
 <body>
-    <script>
-        // Detect if the user is using Instagram's in-app browser
-        var ua = navigator.userAgent || navigator.vendor || window.opera;
-
-        if (ua.indexOf('Instagram') > -1 || ua.indexOf('FBAN') > -1 || ua.indexOf('FBAV') > -1) {
-            // Show a message prompting the user to open in Safari
-            document.body.innerHTML = '<h1>Please open this link in Safari for the best experience</h1>';
-            document.body.innerHTML += '<a href="mailto://sachin@gmail.com" target="_blank" download><button>Open in Safari</button></a>';
-        } else {
-            // Normal behavior if not using Instagram
-            window.location.href = "https://google.com/";
-        }
-    </script>
+  <p>Redirecting...</p>
 </body>
 </html>
