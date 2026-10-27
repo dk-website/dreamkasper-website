@@ -10,6 +10,10 @@
       ],
       "rewrites": [
         {
+          "source": "/upwork/callback{,/**}",
+          "destination": "/upwork/callback.html"
+        },
+        {
           "source": "/about-us{,/**}",
           "destination": "/about-us.html"
         },
@@ -53,6 +57,41 @@
           "source": "**",
           "destination": "/index.html"
         }
+      ],
+      "headers": [
+        {
+          "source": "/upwork/**",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "no-store, max-age=0"
+            },
+            {
+              "key": "Referrer-Policy",
+              "value": "no-referrer"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff"
+            },
+            {
+              "key": "X-Frame-Options",
+              "value": "DENY"
+            },
+            {
+              "key": "X-Robots-Tag",
+              "value": "noindex, nofollow, noarchive"
+            },
+            {
+              "key": "Content-Security-Policy",
+              "value": "default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; connect-src 'none'"
+            },
+            {
+              "key": "Permissions-Policy",
+              "value": "camera=(), microphone=(), geolocation=()"
+            }
+          ]
+        }
       ]
     },
     {
@@ -65,8 +104,47 @@
       ],
       "rewrites": [
         {
+          "source": "/upwork/callback{,/**}",
+          "destination": "/upwork/callback.html"
+        },
+        {
           "source": "**",
           "destination": "/index.html"
+        }
+      ],
+      "headers": [
+        {
+          "source": "/upwork/**",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "no-store, max-age=0"
+            },
+            {
+              "key": "Referrer-Policy",
+              "value": "no-referrer"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff"
+            },
+            {
+              "key": "X-Frame-Options",
+              "value": "DENY"
+            },
+            {
+              "key": "X-Robots-Tag",
+              "value": "noindex, nofollow, noarchive"
+            },
+            {
+              "key": "Content-Security-Policy",
+              "value": "default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; connect-src 'none'"
+            },
+            {
+              "key": "Permissions-Policy",
+              "value": "camera=(), microphone=(), geolocation=()"
+            }
+          ]
         }
       ]
     }

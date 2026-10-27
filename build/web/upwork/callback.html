@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="referrer" content="no-referrer">
+  <title>Connect Upwork · Dream Kasper</title>
+  <link rel="icon" href="/images/favicon.png">
+  <link rel="stylesheet" href="/upwork/callback.css">
+  <script src="/upwork/callback.js" defer></script>
+</head>
+<body>
+  <main class="shell">
+    <a class="brand" href="/" aria-label="Dream Kasper home"><span class="brand-mark" aria-hidden="true">dk.</span> DREAM KASPER <span class="brand-divider">/</span> <span class="brand-product">JOB HUNTER</span></a>
+    <section class="card" aria-labelledby="title">
+      <div class="eyebrow"><span class="dot"></span> UPWORK CONNECTION</div>
+      <div class="icon" aria-hidden="true">↗</div>
+      <h1 id="title">Waiting for authorization</h1>
+      <p id="description" class="description">Start “Connect Upwork” in your local Job Hunter app. After you authorize on Upwork, you’ll return here to copy the response.</p>
+      <noscript><p class="notice">JavaScript is required to read and copy the authorization response. Enable it, then restart the connection from your local app.</p></noscript>
+      <div id="handoff" hidden>
+        <ol class="steps">
+          <li><span>1</span><div><strong>Copy the authorization response</strong><p>This is a temporary handoff, not an access token.</p></div></li>
+          <li><span>2</span><div><strong>Paste it into your local app</strong><p>Return to Job Hunter → Connect Upwork and paste it promptly. The app must verify the response and finish authorization.</p></div></li>
+        </ol>
+        <button id="copy" class="primary" type="button">Copy authorization response <span aria-hidden="true">↗</span></button>
+        <details id="manual"><summary>Show response for manual copying</summary><label for="response">Private authorization response</label><textarea id="response" readonly spellcheck="false" autocomplete="off" autocapitalize="off" aria-describedby="privacy"></textarea></details>
+        <button id="clear" class="secondary" type="button">Clear response from this page</button>
+      </div>
+      <p id="feedback" class="feedback" role="status" aria-live="polite"></p>
+      <div class="privacy" id="privacy"><span aria-hidden="true">◈</span><p>For your local Job Hunter app only. This page does not exchange codes, save credentials, or connect your account. Never share the response in chat or commit it to Git.</p></div>
+    </section>
+    <p class="footer">A private workspace for thoughtful applications.<br><span>Dream Kasper Job Hunter</span></p>
+  </main>
+</body>
+</html>
